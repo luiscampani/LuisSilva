@@ -2,15 +2,66 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Projects</key>
-	<dict/>
-	<key>Simple Day</key>
+	<key>CFBundleIdentifier</key>
 	<string></string>
-	<key>n3phele</key>
-	<string>n3phele is a cloud based environment for analysis of bioinformatic data, being developed at the University of Colorado Boulder Knight Lab. The goal is to exploit unique capabilities of cloud computing to create an environment that: Allows researchers to perform data analysis without requiring any software download or software setup on their computer.
+	<key>About</key>
+	<string>Computer Science undergraduate student, BEPiD student</string>
+	<key>Name</key>
+	<string>Luis Filipe Campani</string>
+	<key>Email</key>
+	<string>luisfilipecampani@gmail.com</string>
+	<key>Phone</key>
+	<string>+55 (51) 9145-0353</string>
+	<key>Linkedin</key>
+	<string>https://www.linkedin.com/pub/luis-filipe-campani/5b/4ab/47</string>
+	<key>Git</key>
+	<string>https://github.com/luiscampani</string>
+	<key>Education</key>
+	<dict>
+		<key>school</key>
+		<string>Pontificia Universidade Catolica do Rio Grande do Sul (PUCRS)</string>
+		<key>period</key>
+		<string>Jan 2012 - Present</string>
+		<key>info</key>
+		<string>Major in Computer Science</string>
+	</dict>
+	<key>Skills</key>
+	<array>
+		<string>Programming languages: Java, C#, Objective-C</string>
+		<string>Agile methodologies: Scrum, Kanban</string>
+		<string>Internet protocols: TCP, UDP</string>
+	</array>
+	<key>Experiences</key>
+	<dict>
+		<key>item 1</key>
+		<dict>
+			<key>job</key>
+			<string>iOS Developer Student @ BEPiD</string>
+			<key>duration</key>
+			<string>Fev 2015 - Present</string>
+			<key>description</key>
+			<string>Student at BEPiD, a program to qualify graduation students on iOS development, where you need to work in a collaborative way with other students and teachers to solve challenges.</string>
+		</dict>
+		<key>item 0</key>
+		<dict>
+			<key>job</key>
+			<string>Software Developer Internship @ CPCA/LIS</string>
+			<key>duration</key>
+			<string>Nov 2013 - Oct 2014</string>
+			<key>description</key>
+			<string>CPCA/LIS is a innovation laboratory created in a collaboration between PUCRS and HP. I worked there as a software developer and researcher, proving concepts that could be used in the future at HP.</string>
+		</dict>
+	</dict>
+	<key>Projects</key>
+	<dict>
+		<key>n3phele</key>
+		<string>n3phele is a cloud based environment for analysis of bioinformatic data, being developed at the University of Colorado Boulder Knight Lab. The goal is to exploit unique capabilities of cloud computing to create an environment that: Allows researchers to perform data analysis without requiring any software download or software setup on their computer.
 Enable on-demand access to scalable analysis pipelines to facilitate simple, rapid processing of large data sets
 Help researchers keep track of data analysis and formulate their own repeatable protocols without having to learn scripting or workflow tools. Enable developers of bioinformatic software to independently share implementations into the community without requiring them to code in a particular language or environment, or to integrate their software into a preexisting platform.</string>
-	<key>Push Notifications</key>
-	<string>A project made to proof if it was possible to support a connection via UDP protocol to send push notifications from a server because the UDP has a smaller amount of overhead over TCP protocol. It also kept a fall through to TCP if the UDP wasn’t able to connect or the router sockets “closed” too fast.</string>
+		<key>Push Notifications</key>
+		<string>The Push Notification Project was a concept test about the current Push Notification system and the need to reduce its cost. The main idea was to use a different network protocol to exchange push messages. It was decided to use UDP and workaround its limitations, building some guarantees such as: a package delivery confirmation system, an algorithm to detect the life time of an opened UDP port and send empty packages to keep it opened and a fallback to TCP when the use of UDP isn&apos;t possible. A PushNotification Server that uses UDP messages instead of TCP doesn&apos;t keep connections with the devices, decreasing its cost. At the end of the project, we were able to prove and to validate the concept.</string>
+		<key>Simple Day</key>
+		<string>My first published app. Created to be an organizer of your daily schedule, adding and seeing tasks in a simple way. It has three options os visualisation(daily, weekly and all tasks) and also has icons that helps you comprehend the tasks without much effort.</string>
+	</dict>
 </dict>
 </plist>

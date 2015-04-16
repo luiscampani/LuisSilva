@@ -10,5 +10,6 @@ import UIKit
 
 class OptionCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var text: UILabel!
+    @IBOutlet weak var imageOption: UIImageView!
+    
 }
