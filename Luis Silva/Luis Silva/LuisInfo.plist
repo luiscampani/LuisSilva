@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Projects</key>
+	<dict/>
+	<key>Simple Day</key>
+	<string></string>
+	<key>n3phele</key>
+	<string>n3phele is a cloud based environment for analysis of bioinformatic data, being developed at the University of Colorado Boulder Knight Lab. The goal is to exploit unique capabilities of cloud computing to create an environment that: Allows researchers to perform data analysis without requiring any software download or software setup on their computer.
+Enable on-demand access to scalable analysis pipelines to facilitate simple, rapid processing of large data sets
+Help researchers keep track of data analysis and formulate their own repeatable protocols without having to learn scripting or workflow tools. Enable developers of bioinformatic software to independently share implementations into the community without requiring them to code in a particular language or environment, or to integrate their software into a preexisting platform.</string>
+	<key>Push Notifications</key>
+	<string>A project made to proof if it was possible to support a connection via UDP protocol to send push notifications from a server because the UDP has a smaller amount of overhead over TCP protocol. It also kept a fall through to TCP if the UDP wasn’t able to connect or the router sockets “closed” too fast.</string>
+</dict>
+</plist>
