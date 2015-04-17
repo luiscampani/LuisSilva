@@ -19,6 +19,7 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var vc2:UIViewController!
     var vc3:UIViewController!
     var vc4:UIViewController!
+    var vc5:UIViewController!
     
     var infos : LSInfo!
     
@@ -30,6 +31,7 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         vc2 = self.storyboard?.instantiateViewControllerWithIdentifier("vc2") as! UIViewController
         vc3 = self.storyboard?.instantiateViewControllerWithIdentifier("vc3") as! UIViewController
         vc4 = self.storyboard?.instantiateViewControllerWithIdentifier("vc4") as! UIViewController
+        vc5 = self.storyboard?.instantiateViewControllerWithIdentifier("vc5") as! UIViewController
         
         infos = LSInfo.init()
         
@@ -43,13 +45,15 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         vc2.view.frame = CGRectMake(0, self.scrollView.frame.size.height, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
         vc3.view.frame = CGRectMake(0, self.scrollView.frame.size.height*2, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
         vc4.view.frame = CGRectMake(0, self.scrollView.frame.size.height*3, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
+        vc5.view.frame = CGRectMake(0, self.scrollView.frame.size.height*4, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
         
         self.scrollView.addSubview(vc1.view)
         self.scrollView.addSubview(vc2.view)
         self.scrollView.addSubview(vc3.view)
         self.scrollView.addSubview(vc4.view)
+        self.scrollView.addSubview(vc5.view)
         
-        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height*4)
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height*5)
     }
     
     override func viewDidAppear(animated: Bool){
@@ -79,9 +83,10 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         var fractionalPage : Float = Float(scrollView.contentOffset.y) / pageHeight
         var page : NSInteger = NSInteger(fractionalPage)
         if (previousPage != page) {
-            changeBackgroundColorCollection(page)
-            NSLog("%d", page)
-            NSLog("%d", previousPage)
+            changeBackgroundColorCollectionCell(page)
+            NSLog("Previous %d", previousPage)
+            NSLog("Current %d", page)
+
             previousPage = page
         }
 
@@ -98,23 +103,64 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-    func changeBackgroundColorCollection(index: NSInteger){
+    func selectedCollectionCellImage(index: Int){
+        var indexPathNewImage : NSIndexPath = NSIndexPath(forItem: index, inSection: 0)
+        var indexPathOldImage : NSIndexPath = NSIndexPath(forItem: previousPage, inSection: 0)
+        var cellNewImage : OptionCollectionViewCell = self.optionsCollectionView.cellForItemAtIndexPath(indexPathNewImage) as! OptionCollectionViewCell
+        var cellOldImage : OptionCollectionViewCell = self.optionsCollectionView.cellForItemAtIndexPath(indexPathOldImage) as! OptionCollectionViewCell
         switch(index){
-        case 0: self.optionsCollectionView.backgroundColor = UIColor(red: 155/255.0, green: 231/255.0, blue: 217/255.0, alpha: 1.0)
-        case 1: self.optionsCollectionView.backgroundColor = UIColor(red: 238/255.0, green: 195/255.0, blue: 109/255.0, alpha: 1.0)
-        case 2: self.optionsCollectionView.backgroundColor = UIColor(red: 141/255.0, green: 91/255.0, blue: 245/255.0, alpha: 1.0)
-        case 3:self.optionsCollectionView.backgroundColor = UIColor(red: 231/255.0, green: 145/255.0, blue: 120/255.0, alpha: 1.0)
-        default: self.optionsCollectionView.backgroundColor = UIColor(red: 94/255.0, green: 132/255.0, blue: 251/255.0, alpha: 1.0)
+        case 0:
+            cellNewImage.imageOption.image = UIImage(named: "About Me Select")
+            cellOldImage.imageOption.image = UIImage(named: defineCollectionCellImage(previousPage))
+        case 1:
+            cellNewImage.imageOption.image = UIImage(named: "Education Select")
+            cellOldImage.imageOption.image = UIImage(named: defineCollectionCellImage(previousPage))
+        case 2:
+            cellNewImage.imageOption.image = UIImage(named: "Skills Select")
+            cellOldImage.imageOption.image = UIImage(named: defineCollectionCellImage(previousPage))
+        case 3:
+            cellNewImage.imageOption.image = UIImage(named: "Experience Select")
+            cellOldImage.imageOption.image = UIImage(named: defineCollectionCellImage(previousPage))
+        case 4:
+            cellNewImage.imageOption.image = UIImage(named: "Contact Select")
+            cellOldImage.imageOption.image = UIImage(named: defineCollectionCellImage(previousPage))
+        default: NSLog("Default - selectedCollectionCellImage")
+        }
+    }
+
+    
+    func changeBackgroundColorCollectionCell(index: NSInteger){
+        switch(index){
+        case 0:
+            self.changeCollectionColorAnimation(UIColor(red: 141/255.0, green: 91/255.0, blue: 245/255.0, alpha: 0.8))
+            self.selectedCollectionCellImage(index)
+        case 1:
+            self.changeCollectionColorAnimation(UIColor(red: 94/255.0, green: 132/255.0, blue: 251/255.0, alpha: 0.8))
+            self.selectedCollectionCellImage(index)
+        case 2:
+            self.changeCollectionColorAnimation(UIColor(red: 155/255.0, green: 231/255.0, blue: 217/255.0, alpha: 0.8))
+            self.selectedCollectionCellImage(index)
+        case 3:
+            self.changeCollectionColorAnimation(UIColor(red: 238/255.0, green: 195/255.0, blue: 109/255.0, alpha: 0.8))
+            self.selectedCollectionCellImage(index)
+        case 4:
+            self.changeCollectionColorAnimation(UIColor(red: 231/255.0, green: 145/255.0, blue: 120/255.0, alpha: 0.8))
+            self.selectedCollectionCellImage(index)
+        default: NSLog("Default Background Color")
         }
     }
 
     func scrollViewFirstExecAnimation(){
         let duration = 1.0
-        let delay = 0.0
-        let option = UIViewAnimationOptions.CurveLinear
-        
         UIView.animateWithDuration(duration, animations: {
             self.scrollView.frame = CGRectMake(60, 64, self.scrollView.frame.width, self.scrollView.frame.height)
+        })
+    }
+    
+    func changeCollectionColorAnimation(color : UIColor){
+        let duration = 0.15
+        UIView.animateWithDuration(duration, animations: {
+            self.optionsCollectionView.backgroundColor = color
         })
     }
     
