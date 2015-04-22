@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1229791AE7C1C500B41DAE /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229781AE7C1C500B41DAE /* AboutMeViewController.swift */; };
+		7A12297B1AE804E400B41DAE /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12297A1AE804E400B41DAE /* ContactViewController.swift */; };
+		7A12297D1AE8342D00B41DAE /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12297C1AE8342D00B41DAE /* SchoolViewController.swift */; };
 		7A68655B1ADFF4BF00EC62B1 /* LuisInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A68655A1ADFF4BF00EC62B1 /* LuisInfo.plist */; };
-		7A68655D1AE0463C00EC62B1 /* LSInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68655C1AE0463C00EC62B1 /* LSInfo.swift */; };
 		7AD86A9C1ADDB43D0044D221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD86A9B1ADDB43D0044D221 /* AppDelegate.swift */; };
 		7AD86AA11ADDB43D0044D221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD86A9F1ADDB43D0044D221 /* Main.storyboard */; };
 		7AD86AA31ADDB43D0044D221 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD86AA21ADDB43D0044D221 /* Images.xcassets */; };
@@ -29,8 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1229781AE7C1C500B41DAE /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		7A12297A1AE804E400B41DAE /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		7A12297C1AE8342D00B41DAE /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		7A68655A1ADFF4BF00EC62B1 /* LuisInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LuisInfo.plist; sourceTree = "<group>"; };
-		7A68655C1AE0463C00EC62B1 /* LSInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSInfo.swift; sourceTree = "<group>"; };
 		7AD86A961ADDB43D0044D221 /* Luis Silva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luis Silva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD86A9A1ADDB43D0044D221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AD86A9B1ADDB43D0044D221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 			children = (
 				7AD86A9B1ADDB43D0044D221 /* AppDelegate.swift */,
 				7AD86ABD1ADDBA500044D221 /* LSMeViewController.swift */,
-				7A68655C1AE0463C00EC62B1 /* LSInfo.swift */,
+				7A12297C1AE8342D00B41DAE /* SchoolViewController.swift */,
+				7A1229781AE7C1C500B41DAE /* AboutMeViewController.swift */,
+				7A12297A1AE804E400B41DAE /* ContactViewController.swift */,
 				7AD86ABF1ADDBBA30044D221 /* OptionCollectionViewCell.swift */,
 				7AD86A9F1ADDB43D0044D221 /* Main.storyboard */,
 				7AD86AA21ADDB43D0044D221 /* Images.xcassets */,
@@ -223,9 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD86A9C1ADDB43D0044D221 /* AppDelegate.swift in Sources */,
+				7A1229791AE7C1C500B41DAE /* AboutMeViewController.swift in Sources */,
+				7A12297D1AE8342D00B41DAE /* SchoolViewController.swift in Sources */,
 				7AD86ABE1ADDBA500044D221 /* LSMeViewController.swift in Sources */,
-				7A68655D1AE0463C00EC62B1 /* LSInfo.swift in Sources */,
 				7AD86AC01ADDBBA30044D221 /* OptionCollectionViewCell.swift in Sources */,
+				7A12297B1AE804E400B41DAE /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

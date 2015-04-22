@@ -4,8 +4,14 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string></string>
+	<key>Facebook</key>
+	<string>https://www.facebook.com/luisfilipe.campani</string>
 	<key>About</key>
-	<string>Computer Science undergraduate student, BEPiD student</string>
+	<string>Hello!
+My name is Luis and I will show you a bit about me.
+I am a computer science undergraduate student at PUCRS and also a BEPiD student.
+When not studying, I enjoy playing video-games such as Fifa or Diablo III.
+Passionate about innovation and always seeking a bigger challenge.</string>
 	<key>Name</key>
 	<string>Luis Filipe Campani</string>
 	<key>Email</key>
@@ -13,7 +19,7 @@
 	<key>Phone</key>
 	<string>+55 (51) 9145-0353</string>
 	<key>Linkedin</key>
-	<string>https://www.linkedin.com/pub/luis-filipe-campani/5b/4ab/47</string>
+	<string>https://br.linkedin.com/in/luisfilipecampani</string>
 	<key>Git</key>
 	<string>https://github.com/luiscampani</string>
 	<key>Education</key>
@@ -23,10 +29,11 @@
 		<key>period</key>
 		<string>Jan 2012 - Present</string>
 		<key>info</key>
-		<string>Major in Computer Science</string>
+		<string>Bachelor in Computer Science</string>
 	</dict>
-	<key>Skills</key>
+	<key>Knowledges</key>
 	<array>
+		<string>Database: Relational Databases and Non Relational Database, SQL.</string>
 		<string>Programming languages: Java, C#, Objective-C</string>
 		<string>Agile methodologies: Scrum, Kanban</string>
 		<string>Internet protocols: TCP, UDP</string>

@@ -15,30 +15,30 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var optionsCollectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var vc1:UIViewController!
-    var vc2:UIViewController!
+    var vc1:AboutMeViewController!
+    var vc2:SchoolViewController!
     var vc3:UIViewController!
     var vc4:UIViewController!
-    var vc5:UIViewController!
+    var vc5:ContactViewController!
     
-    var infos : LSInfo!
+    var infosDict : NSDictionary!
+    
+    // MARK: -ViewController Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        vc1 = self.storyboard?.instantiateViewControllerWithIdentifier("vc1") as! UIViewController
-        vc2 = self.storyboard?.instantiateViewControllerWithIdentifier("vc2") as! UIViewController
+        vc1 = self.storyboard?.instantiateViewControllerWithIdentifier("vc1") as! AboutMeViewController
+        vc2 = self.storyboard?.instantiateViewControllerWithIdentifier("vc2") as! SchoolViewController
         vc3 = self.storyboard?.instantiateViewControllerWithIdentifier("vc3") as! UIViewController
         vc4 = self.storyboard?.instantiateViewControllerWithIdentifier("vc4") as! UIViewController
-        vc5 = self.storyboard?.instantiateViewControllerWithIdentifier("vc5") as! UIViewController
+        vc5 = self.storyboard?.instantiateViewControllerWithIdentifier("vc5") as! ContactViewController
         
-        infos = LSInfo.init()
-        
-        NSLog("%@",infos.infoDict!)
-        
+        if let path = NSBundle.mainBundle().pathForResource("LuisInfo", ofType: "plist") {
+            infosDict = NSDictionary(contentsOfFile: path)!
+        }
     }
-    
     
     override func viewDidLayoutSubviews() {
         vc1.view.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
@@ -57,8 +57,11 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     override func viewDidAppear(animated: Bool){
-        self.scrollView.frame = CGRectMake(60, UIScreen.mainScreen().bounds.height, self.scrollView.frame.width, self.scrollView.frame.height)
+        self.scrollView.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height, self.scrollView.frame.width, self.scrollView.frame.height)
         self.scrollViewFirstExecAnimation()
+        self.loadAboutMeInfo()
+        self.loadSchoolInfo()
+        self.loadContactInfo()
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,40 +69,50 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: -CollectiovView DelegateDataSource Methods
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell : OptionCollectionViewCell! = collectionView.dequeueReusableCellWithReuseIdentifier("Option", forIndexPath: indexPath) as? OptionCollectionViewCell
-        
-        cell.imageOption.image = UIImage(named: self.defineCollectionCellImage(indexPath.row))
-        
+        if(indexPath.row > 0){
+            NSLog("%d", indexPath.row)
+            cell.imageOption.image = UIImage(named: self.defineCollectionCellImage(indexPath.row))
+        }
+        else{
+            cell.imageOption.image = UIImage(named:"About Me Select")
+        }
         return cell
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        var pageHeight : Float = Float(scrollView.frame.size.height)
-        var fractionalPage : Float = Float(scrollView.contentOffset.y) / pageHeight
-        var page : NSInteger = NSInteger(fractionalPage)
-        if (previousPage != page) {
-            changeBackgroundColorCollectionCell(page)
-            NSLog("Previous %d", previousPage)
-            NSLog("Current %d", page)
-
-            previousPage = page
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        var cellCount : Int = self.optionsCollectionView.numberOfItemsInSection(section)
+        if (cellCount > 0){
+            var clFlow: UICollectionViewFlowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+            var cellHeight : CGFloat = (clFlow.itemSize.height + clFlow.minimumInteritemSpacing) as CGFloat
+            var totalCellHeight : CGFloat = cellHeight * CGFloat(cellCount)
+            var contentHeight : CGFloat = self.optionsCollectionView.frame.size.height - self.optionsCollectionView.contentInset.top - self.optionsCollectionView.contentInset.bottom
+            
+            if(totalCellHeight<contentHeight){
+                var padding : CGFloat = (contentHeight - totalCellHeight) / 2.0
+                return UIEdgeInsetsMake(padding, 0, padding, 0)
+            }
         }
-
+        return UIEdgeInsetsZero
     }
+    
+    // MARK: -CellCollectionView Methods
     
     func defineCollectionCellImage(index: Int) -> String{
         switch(index){
-        case 0: return "About Me"
-        case 1: return "Education"
-        case 2: return "Skills"
-        case 3: return "Experience"
-        case 4: return "Contact"
-        default: return ""
+            case 0: return "About Me"
+            case 1: return "Education"
+            case 2: return "Skills"
+            case 3: return "Experience"
+            case 4: return "Contact"
+            default: return ""
         }
     }
     
@@ -127,56 +140,51 @@ class LSMeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         default: NSLog("Default - selectedCollectionCellImage")
         }
     }
-
     
-    func changeBackgroundColorCollectionCell(index: NSInteger){
-        switch(index){
-        case 0:
-            self.changeCollectionColorAnimation(UIColor(red: 141/255.0, green: 91/255.0, blue: 245/255.0, alpha: 0.8))
-            self.selectedCollectionCellImage(index)
-        case 1:
-            self.changeCollectionColorAnimation(UIColor(red: 94/255.0, green: 132/255.0, blue: 251/255.0, alpha: 0.8))
-            self.selectedCollectionCellImage(index)
-        case 2:
-            self.changeCollectionColorAnimation(UIColor(red: 155/255.0, green: 231/255.0, blue: 217/255.0, alpha: 0.8))
-            self.selectedCollectionCellImage(index)
-        case 3:
-            self.changeCollectionColorAnimation(UIColor(red: 238/255.0, green: 195/255.0, blue: 109/255.0, alpha: 0.8))
-            self.selectedCollectionCellImage(index)
-        case 4:
-            self.changeCollectionColorAnimation(UIColor(red: 231/255.0, green: 145/255.0, blue: 120/255.0, alpha: 0.8))
-            self.selectedCollectionCellImage(index)
-        default: NSLog("Default Background Color")
+    // MARK: -ScrollView DelegateDataSource Methods
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        var pageHeight : Float = Float(scrollView.frame.size.height)
+        var fractionalPage : Float = Float(scrollView.contentOffset.y) / pageHeight
+        var page : NSInteger = NSInteger(fractionalPage)
+        if (previousPage != page) {
+            selectedCollectionCellImage(page)
+            previousPage = page
         }
+        
     }
-
+    
+    
+    // MARK: -Animation Methods
+    
     func scrollViewFirstExecAnimation(){
-        let duration = 1.0
+        let duration = 0.5
         UIView.animateWithDuration(duration, animations: {
-            self.scrollView.frame = CGRectMake(60, 64, self.scrollView.frame.width, self.scrollView.frame.height)
+            self.scrollView.frame = CGRectMake(0, 0, self.scrollView.frame.width, self.scrollView.frame.height)
         })
     }
     
-    func changeCollectionColorAnimation(color : UIColor){
-        let duration = 0.15
-        UIView.animateWithDuration(duration, animations: {
-            self.optionsCollectionView.backgroundColor = color
-        })
+    // MARK: -LoadInfo Methods
+    func loadAboutMeInfo(){
+        vc1.aboutMeImage.image = UIImage(named: "Photo")
+        vc1.aboutMeTextField.text = infosDict.valueForKey("About") as! String
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        var cellCount : Int = self.optionsCollectionView.numberOfItemsInSection(section)
-        if (cellCount > 0){
-            var clFlow: UICollectionViewFlowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-            var cellHeight : CGFloat = (clFlow.itemSize.height + clFlow.minimumInteritemSpacing) as CGFloat
-            var totalCellHeight : CGFloat = cellHeight * CGFloat(cellCount)
-            var contentHeight : CGFloat = self.optionsCollectionView.frame.size.height - self.optionsCollectionView.contentInset.top - self.optionsCollectionView.contentInset.bottom
-            
-            if(totalCellHeight<contentHeight){
-                var padding : CGFloat = (contentHeight - totalCellHeight) / 2.0
-                return UIEdgeInsetsMake(padding, 0, padding, 0)
-            }
-        }
-        return UIEdgeInsetsZero
+    func loadContactInfo(){
+        vc5.gitImage.image = UIImage(named:"GitHub")
+        vc5.linkedinImage.image = UIImage(named: "LinkedIn")
+        vc5.faceImage.image = UIImage(named: "Facebook")
+        
+        vc5.emailLabel.text = infosDict.valueForKey("Email") as? String
+        vc5.phoneLabel.text = infosDict.valueForKey("Phone") as? String
+        
     }
+
+    func loadSchoolInfo(){
+        var infoSchool : NSDictionary = infosDict.valueForKey("Education") as! NSDictionary
+        vc2.schoolLabel.text = infoSchool.valueForKey("school") as? String
+        vc2.bachelorLabel.text = infoSchool.valueForKey("info") as? String
+        vc2.periodLabel.text = infoSchool.valueForKey("period") as? String
+    }
+
 }
