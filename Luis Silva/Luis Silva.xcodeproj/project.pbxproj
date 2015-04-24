@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A1229791AE7C1C500B41DAE /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229781AE7C1C500B41DAE /* AboutMeViewController.swift */; };
-		7A12297B1AE804E400B41DAE /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12297A1AE804E400B41DAE /* ContactViewController.swift */; };
-		7A12297D1AE8342D00B41DAE /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12297C1AE8342D00B41DAE /* SchoolViewController.swift */; };
+		7A1229801AE84CA900B41DAE /* LSMeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12297F1AE84CA900B41DAE /* LSMeInfo.swift */; };
+		7A1229871AE90DD800B41DAE /* LSSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229861AE90DD800B41DAE /* LSSkillsViewController.swift */; };
+		7A1229891AE91EA600B41DAE /* LSProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229881AE91EA600B41DAE /* LSProjectsViewController.swift */; };
+		7A12298B1AE96D1E00B41DAE /* LSExperiencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12298A1AE96D1E00B41DAE /* LSExperiencesViewController.swift */; };
+		7A12298F1AE9BB4700B41DAE /* LSSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12298E1AE9BB4700B41DAE /* LSSchoolViewController.swift */; };
+		7A1229911AE9BBDE00B41DAE /* LSAboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229901AE9BBDE00B41DAE /* LSAboutMeViewController.swift */; };
+		7A1229931AE9BC7F00B41DAE /* LSContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229921AE9BC7F00B41DAE /* LSContactViewController.swift */; };
+		7A1229951AE9BD5100B41DAE /* LSOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1229941AE9BD5100B41DAE /* LSOptionCollectionViewCell.swift */; };
 		7A68655B1ADFF4BF00EC62B1 /* LuisInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A68655A1ADFF4BF00EC62B1 /* LuisInfo.plist */; };
 		7AD86A9C1ADDB43D0044D221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD86A9B1ADDB43D0044D221 /* AppDelegate.swift */; };
 		7AD86AA11ADDB43D0044D221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD86A9F1ADDB43D0044D221 /* Main.storyboard */; };
@@ -17,7 +22,6 @@
 		7AD86AA61ADDB43D0044D221 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD86AA41ADDB43D0044D221 /* LaunchScreen.xib */; };
 		7AD86AB21ADDB43D0044D221 /* Luis_SilvaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD86AB11ADDB43D0044D221 /* Luis_SilvaTests.swift */; };
 		7AD86ABE1ADDBA500044D221 /* LSMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD86ABD1ADDBA500044D221 /* LSMeViewController.swift */; };
-		7AD86AC01ADDBBA30044D221 /* OptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD86ABF1ADDBBA30044D221 /* OptionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A1229781AE7C1C500B41DAE /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
-		7A12297A1AE804E400B41DAE /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		7A12297C1AE8342D00B41DAE /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
+		7A12297F1AE84CA900B41DAE /* LSMeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMeInfo.swift; sourceTree = "<group>"; };
+		7A1229861AE90DD800B41DAE /* LSSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSSkillsViewController.swift; sourceTree = "<group>"; };
+		7A1229881AE91EA600B41DAE /* LSProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSProjectsViewController.swift; sourceTree = "<group>"; };
+		7A12298A1AE96D1E00B41DAE /* LSExperiencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSExperiencesViewController.swift; sourceTree = "<group>"; };
+		7A12298E1AE9BB4700B41DAE /* LSSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSSchoolViewController.swift; sourceTree = "<group>"; };
+		7A1229901AE9BBDE00B41DAE /* LSAboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSAboutMeViewController.swift; sourceTree = "<group>"; };
+		7A1229921AE9BC7F00B41DAE /* LSContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSContactViewController.swift; sourceTree = "<group>"; };
+		7A1229941AE9BD5100B41DAE /* LSOptionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7A68655A1ADFF4BF00EC62B1 /* LuisInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LuisInfo.plist; sourceTree = "<group>"; };
 		7AD86A961ADDB43D0044D221 /* Luis Silva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luis Silva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD86A9A1ADDB43D0044D221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +54,6 @@
 		7AD86AB01ADDB43D0044D221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AD86AB11ADDB43D0044D221 /* Luis_SilvaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luis_SilvaTests.swift; sourceTree = "<group>"; };
 		7AD86ABD1ADDBA500044D221 /* LSMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMeViewController.swift; sourceTree = "<group>"; };
-		7AD86ABF1ADDBBA30044D221 /* OptionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1229821AE84F1300B41DAE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AD86ABD1ADDBA500044D221 /* LSMeViewController.swift */,
+				7A1229861AE90DD800B41DAE /* LSSkillsViewController.swift */,
+				7A1229881AE91EA600B41DAE /* LSProjectsViewController.swift */,
+				7A12298A1AE96D1E00B41DAE /* LSExperiencesViewController.swift */,
+				7A12298E1AE9BB4700B41DAE /* LSSchoolViewController.swift */,
+				7A1229901AE9BBDE00B41DAE /* LSAboutMeViewController.swift */,
+				7A1229921AE9BC7F00B41DAE /* LSContactViewController.swift */,
+				7A1229941AE9BD5100B41DAE /* LSOptionCollectionViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7A1229831AE84F4200B41DAE /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7AD86A9B1ADDB43D0044D221 /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		7A1229841AE84F5900B41DAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A12297F1AE84CA900B41DAE /* LSMeInfo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7A1229851AE84F6A00B41DAE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7AD86A9F1ADDB43D0044D221 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		7AD86A8D1ADDB43D0044D221 = {
 			isa = PBXGroup;
 			children = (
@@ -87,16 +134,13 @@
 		7AD86A981ADDB43D0044D221 /* Luis Silva */ = {
 			isa = PBXGroup;
 			children = (
-				7AD86A9B1ADDB43D0044D221 /* AppDelegate.swift */,
-				7AD86ABD1ADDBA500044D221 /* LSMeViewController.swift */,
-				7A12297C1AE8342D00B41DAE /* SchoolViewController.swift */,
-				7A1229781AE7C1C500B41DAE /* AboutMeViewController.swift */,
-				7A12297A1AE804E400B41DAE /* ContactViewController.swift */,
-				7AD86ABF1ADDBBA30044D221 /* OptionCollectionViewCell.swift */,
-				7AD86A9F1ADDB43D0044D221 /* Main.storyboard */,
+				7A1229831AE84F4200B41DAE /* Delegate */,
+				7A1229841AE84F5900B41DAE /* Model */,
+				7A1229821AE84F1300B41DAE /* Controllers */,
+				7A1229851AE84F6A00B41DAE /* Storyboard */,
+				7AD86A991ADDB43D0044D221 /* Supporting Files */,
 				7AD86AA21ADDB43D0044D221 /* Images.xcassets */,
 				7AD86AA41ADDB43D0044D221 /* LaunchScreen.xib */,
-				7AD86A991ADDB43D0044D221 /* Supporting Files */,
 			);
 			path = "Luis Silva";
 			sourceTree = "<group>";
@@ -229,11 +273,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD86A9C1ADDB43D0044D221 /* AppDelegate.swift in Sources */,
-				7A1229791AE7C1C500B41DAE /* AboutMeViewController.swift in Sources */,
-				7A12297D1AE8342D00B41DAE /* SchoolViewController.swift in Sources */,
+				7A12298B1AE96D1E00B41DAE /* LSExperiencesViewController.swift in Sources */,
+				7A1229951AE9BD5100B41DAE /* LSOptionCollectionViewCell.swift in Sources */,
+				7A12298F1AE9BB4700B41DAE /* LSSchoolViewController.swift in Sources */,
+				7A1229891AE91EA600B41DAE /* LSProjectsViewController.swift in Sources */,
+				7A1229801AE84CA900B41DAE /* LSMeInfo.swift in Sources */,
+				7A1229931AE9BC7F00B41DAE /* LSContactViewController.swift in Sources */,
 				7AD86ABE1ADDBA500044D221 /* LSMeViewController.swift in Sources */,
-				7AD86AC01ADDBBA30044D221 /* OptionCollectionViewCell.swift in Sources */,
-				7A12297B1AE804E400B41DAE /* ContactViewController.swift in Sources */,
+				7A1229871AE90DD800B41DAE /* LSSkillsViewController.swift in Sources */,
+				7A1229911AE9BBDE00B41DAE /* LSAboutMeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

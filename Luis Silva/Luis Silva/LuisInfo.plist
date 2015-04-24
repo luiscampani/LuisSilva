@@ -8,7 +8,7 @@
 	<string>https://www.facebook.com/luisfilipe.campani</string>
 	<key>About</key>
 	<string>Hello!
-My name is Luis and I will show you a bit about me.
+My name is Luis and I would like to present you a bit about me.
 I am a computer science undergraduate student at PUCRS and also a BEPiD student.
 When not studying, I enjoy playing video-games such as Fifa or Diablo III.
 Passionate about innovation and always seeking a bigger challenge.</string>
@@ -32,24 +32,18 @@ Passionate about innovation and always seeking a bigger challenge.</string>
 		<string>Bachelor in Computer Science</string>
 	</dict>
 	<key>Knowledges</key>
-	<array>
-		<string>Database: Relational Databases and Non Relational Database, SQL.</string>
-		<string>Programming languages: Java, C#, Objective-C</string>
-		<string>Agile methodologies: Scrum, Kanban</string>
-		<string>Internet protocols: TCP, UDP</string>
-	</array>
-	<key>Experiences</key>
 	<dict>
-		<key>item 1</key>
-		<dict>
-			<key>job</key>
-			<string>iOS Developer Student @ BEPiD</string>
-			<key>duration</key>
-			<string>Fev 2015 - Present</string>
-			<key>description</key>
-			<string>Student at BEPiD, a program to qualify graduation students on iOS development, where you need to work in a collaborative way with other students and teachers to solve challenges.</string>
-		</dict>
-		<key>item 0</key>
+		<key>languages</key>
+		<string>Java, C#, Objective-C</string>
+		<key>protocols</key>
+		<string>WebServices, TCP, UDP</string>
+		<key>database</key>
+		<string>Relational Databases and Non Relational Database</string>
+		<key>agile</key>
+		<string>Scrum, Kanban</string>
+	</dict>
+	<key>Experiences</key>
+	<array>
 		<dict>
 			<key>job</key>
 			<string>Software Developer Internship @ CPCA/LIS</string>
@@ -58,17 +52,24 @@ Passionate about innovation and always seeking a bigger challenge.</string>
 			<key>description</key>
 			<string>CPCA/LIS is a innovation laboratory created in a collaboration between PUCRS and HP. I worked there as a software developer and researcher, proving concepts that could be used in the future at HP.</string>
 		</dict>
-	</dict>
+		<dict>
+			<key>job</key>
+			<string>iOS Developer Student @ BEPiD</string>
+			<key>duration</key>
+			<string>Fev 2015 - Present</string>
+			<key>description</key>
+			<string>Student at BEPiD, a program to qualify graduation students on iOS development.</string>
+		</dict>
+	</array>
 	<key>Projects</key>
 	<dict>
 		<key>n3phele</key>
-		<string>n3phele is a cloud based environment for analysis of bioinformatic data, being developed at the University of Colorado Boulder Knight Lab. The goal is to exploit unique capabilities of cloud computing to create an environment that: Allows researchers to perform data analysis without requiring any software download or software setup on their computer.
-Enable on-demand access to scalable analysis pipelines to facilitate simple, rapid processing of large data sets
-Help researchers keep track of data analysis and formulate their own repeatable protocols without having to learn scripting or workflow tools. Enable developers of bioinformatic software to independently share implementations into the community without requiring them to code in a particular language or environment, or to integrate their software into a preexisting platform.</string>
+		<string>n3phele is a cloud based environment for analysis of bioinformatic data, developed at the University of Colorado. By exploiting the power of cloud computing, it:
+Lets researchers analyze data without needing any downloads. Grants access to scalable pipelines for data processing and record keeping. Enables developers of bioinformatic software to independently share implementations into the community without requiring them to code in a particular language or environment, or to integrate their software into a preexisting platform.</string>
 		<key>Push Notifications</key>
-		<string>The Push Notification Project was a concept test about the current Push Notification system and the need to reduce its cost. The main idea was to use a different network protocol to exchange push messages. It was decided to use UDP and workaround its limitations, building some guarantees such as: a package delivery confirmation system, an algorithm to detect the life time of an opened UDP port and send empty packages to keep it opened and a fallback to TCP when the use of UDP isn&apos;t possible. A PushNotification Server that uses UDP messages instead of TCP doesn&apos;t keep connections with the devices, decreasing its cost. At the end of the project, we were able to prove and to validate the concept.</string>
+		<string>The Push Notification Project was a concept test about the current push notification system and the need to reduce its cost. A Push Notification Server that sends packets through UDP, instead of TCP, does not keep connections with the devices, decreasing its cost, so the main idea was to use this protocol and work around its limitations by building some guarantees: a package delivery confirmation system, an algorithm to detect the lifetime of an opened UDP port and sending empty packages to keep it that way and a fallback to TCP when the use of UDP is not possible. The project was successful, proved and the concept validated.</string>
 		<key>Simple Day</key>
-		<string>My first published app. Created to be an organizer of your daily schedule, adding and seeing tasks in a simple way. It has three options os visualisation(daily, weekly and all tasks) and also has icons that helps you comprehend the tasks without much effort.</string>
+		<string>My first approved app on the Apple Store. It is an organizer of your daily schedule, keeping track of all your tasks in a simple way. It has three options of visualization(daily, weekly and all tasks) and icons that helps you comprehend the tasks without much effort. You can also add descriptions to the tasks, making them even more understandable. </string>
 	</dict>
 </dict>
 </plist>

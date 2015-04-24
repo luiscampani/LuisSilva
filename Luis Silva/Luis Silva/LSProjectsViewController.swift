@@ -1,22 +1,27 @@
 //
-//  AboutMeViewController.swift
+//  LSProjectsViewController.swift
 //  Luis Silva
 //
-//  Created by Luis Filipe Campani on 4/22/15.
+//  Created by Luis Filipe Campani on 4/23/15.
 //  Copyright (c) 2015 Luis Filipe Novo Campani da Silva. All rights reserved.
 //
 
 import UIKit
 
-class AboutMeViewController: UIViewController {
-
-    @IBOutlet weak var aboutMeTextField: UITextView!
-    @IBOutlet weak var aboutMeImage: UIImageView!
+class LSProjectsViewController: UIViewController {
+    
+    
+    @IBOutlet weak var projectLabel: UILabel!
+    @IBOutlet weak var projectTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+
     }
 
     override func didReceiveMemoryWarning() {

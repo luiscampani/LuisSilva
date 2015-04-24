@@ -1,22 +1,18 @@
 //
-//  ContactViewController.swift
+//  LSSchoolViewController.swift
 //  Luis Silva
 //
-//  Created by Luis Filipe Campani on 4/22/15.
+//  Created by Luis Filipe Campani on 4/23/15.
 //  Copyright (c) 2015 Luis Filipe Novo Campani da Silva. All rights reserved.
 //
 
 import UIKit
 
-class ContactViewController: UIViewController {
+class LSSchoolViewController: UIViewController {
 
-    @IBOutlet weak var gitImage: UIImageView!
-    @IBOutlet weak var linkedinImage: UIImageView!
-    @IBOutlet weak var faceImage: UIImageView!
-    
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-
+    @IBOutlet weak var schoolLabel: UILabel!
+    @IBOutlet weak var bachelorLabel: UILabel!
+    @IBOutlet weak var periodLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
